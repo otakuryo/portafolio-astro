@@ -1,0 +1,27 @@
+---
+import Popover from "@/components/tools/Popover.astro";
+const items = [
+    { name: "JavaScript", icon: "javascript", link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript" },
+    { name: "TypeScript", icon: "typescript", link: "https://www.typescriptlang.org/" },
+    { name: "Svelte", icon: "svelte", link: "https://svelte.dev/" },
+    { name: "Astro", icon: "astro", link: "https://astro.build/" },
+    { name: "Laravel", icon: "laravel", link: "https://laravel.com/" },
+    { name: "PHP", icon: "php", link: "https://www.php.net/" },
+    { name: "MySQL", icon: "mysql", link: "https://www.mysql.com/" },
+    { name: "Git", icon: "git", link: "https://git-scm.com/" },
+    { name: "SASS/SCSS", icon: "sass", link: "https://sass-lang.com/" },
+    { name: "Bootstrap", icon: "bootstrap", link: "https://getbootstrap.com/" },
+    { name: "HTML5", icon: "html5", link: "https://developer.mozilla.org/en-US/docs/Web/HTML" },
+    { name: "CSS3", icon: "css3", link: "https://developer.mozilla.org/en-US/docs/Web/CSS" },
+    { name: "Docker", icon: "docker", link: "https://www.docker.com/" }
+];
+---
+
+<div class="container-skills bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg rounded-xl p-6 shadow-lg">
+    <h2 class="text-2xl font-semibold mb-4">Conocimientos sólidos</h2>
+    <div class="grid-skills grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+        {items.map((item) => (
+            <Popover name={item.name} icon={item.icon} link={item.link} />
+        ))}
+    </div>
+</div>

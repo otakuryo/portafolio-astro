@@ -1,19 +1,21 @@
 ---
 import Header from "@/components/Header.astro";
-import Home from "@/components/home.astro";
+import MainSection from "@/components/body/MainSection.astro";
 import "@/styles/main.css";
 ---
 
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Mi Portafolio</title>
+
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
 	</head>
 	<body>
 		<Header />
-		<Home />
+		<MainSection />
 	</body>
 </html>

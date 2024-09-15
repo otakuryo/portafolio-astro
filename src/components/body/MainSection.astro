@@ -1,0 +1,48 @@
+---
+import "devicon";
+import SkillGrid from "@/components/body/SkillGrid.astro";
+---
+
+<main class="container mx-auto">
+    <h1 class="text-4xl font-bold mb-8 text-center">Mi Portafolio</h1>
+    
+    <div class="grid grid-cols-3 gap-6">
+        <!-- Sobre mí -->
+        <div class="description-about-me col-span-2 bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg rounded-xl p-6 shadow-lg">
+            <h2 class="text-2xl font-semibold mb-4">Agustin... sin tilde...</h2>
+            <p>Desarrollador fullstack con multiples habilidades tecnológicas</p>
+            <p>Entusiasmado por todo lo relacionado con la tecnología, curioso, siempre abierto a nuevos conocimientos, dedicado y perseverante.</p>
+            <p>Me gusta programar en mis tiempos libres, investigar, probar y ponerlos en práctica en proyectos.</p>
+            <p>Soy una persona capaz, motivado, abierto a nuevos conocimientos independientemente de mi profesión.</p>
+            <p>Tengo el 2do grado de DAM en conocimientos reglados, y por méritos propios logré aprender, probar e implantar diferentes lenguajes de programación con sus diferentes frameworks e IDEs, además de los métodos y conceptos de desarrollo con diferentes cursos no reglados.  </p>
+            <p>Puedo trabajar en equipo, soy bueno resolviendo problemas, obteniendo resultados y me manejo bien trabajando bajo presión.</p>
+        </div>
+        
+        <!-- Foto -->
+        <div class="bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg rounded-xl p-6 shadow-lg flex items-center justify-center">
+            <img src="/img/mainimage@2x.png" alt="Tu foto" class="rounded-full size-80 object-cover"/>
+        </div>
+        
+        <!-- Habilidades -->
+        <SkillGrid />
+        
+        <!-- Proyectos -->
+        <div class="col-span-2 bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg rounded-xl p-6 shadow-lg">
+            <h2 class="text-2xl font-semibold mb-4">Proyectos Destacados</h2>
+            <div class="grid grid-cols-2 gap-4">
+                <div class="bg-white bg-opacity-20 p-4 rounded-lg">Proyecto 1</div>
+                <div class="bg-white bg-opacity-20 p-4 rounded-lg">Proyecto 2</div>
+                <div class="bg-white bg-opacity-20 p-4 rounded-lg">Proyecto 3</div>
+                <div class="bg-white bg-opacity-20 p-4 rounded-lg">Proyecto 4</div>
+            </div>
+        </div>
+        
+        <!-- Contacto -->
+        <div class="col-span-3 bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg rounded-xl p-6 shadow-lg">
+            <h2 class="text-2xl font-semibold mb-4">Contacto</h2>
+            <p>Email: tu@email.com</p>
+            <p>LinkedIn: /in/tu-perfil</p>
+            <p>GitHub: /tu-usuario</p>
+        </div>
+    </div>
+</main>

@@ -1,0 +1,33 @@
+---
+    const { name, icon, link } = Astro.props;
+    const iconClass = `pe-2 devicon-${icon}-plain colored text-4xl`;  
+---
+<style>
+    .icon-container .show-tooltip {
+        display: none;
+    }
+    .icon-container:hover .show-tooltip {
+        display: block;
+    }
+
+    .icon-container {
+        opacity: 1;
+        transition: opacity 0.3s ease;
+    }
+
+    :global(.grid-skills:hover .icon-container) {
+        opacity: 0.3;
+    }
+
+    :global(.grid-skills .icon-container:hover) {
+        opacity: 1;
+    }
+</style>
+
+<div class="icon-container flex items-center justify-center relative" title={name}>
+    <a href={link} target="_blank"><i class={iconClass}></i></a>
+    <span class="show-tooltip absolute min-w-16 top-3/4 left-2/4 -translate-x-2/4 bg-black/50 text-white text-center rounded-md px-2 py-1">
+        {name}
+    </span>
+</div>
+

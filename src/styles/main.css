@@ -21,5 +21,16 @@ html.dark {
 }
 
 h1 {
-    @apply text-2xl font-bold;
+  @apply text-2xl font-bold;
+}
+
+
+
+/* Main section */
+.description-about-me {
+  @apply p-4;
+
+  p {
+    @apply pb-2;
+  }
 }

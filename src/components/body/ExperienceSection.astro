@@ -1,0 +1,39 @@
+---
+import ExperienceSectionItem from '@/components/partials/ExperienceSectionItem.astro';
+
+const experiences = [
+    {
+        company: 'ADN Comunicacion',
+        betweenDates: '2022 - actualidad',
+        excerpt: 'En está empresa me desempeño como desarrollador fullstack, trabajando principalmente con Laravel en la parte de back-end y bootstrap y react en la parte de front-end.',
+        showMore: 'Ver más',
+        descriptionHTML: '<p>En determinados dias doy soporte tecnico informatico a los empleados de la empresa, así como soluciones puntuales de problemas informaticos y dudas sobre como usar ciertas aplicaciones.</p><p>Por otro lado, soy el encargado de la infraestructura de la empresa, lo que incluye la configuración y mantenimiento de las diferentes servidores y aplicaciones que la empresa usa con lo de servidores web, bases de datos y aplicaciones internas se refiere, gracias a esto he aprendido a usar diferentes sistemas operativos como linux y diferentes tipos de servidores como Apache, Nginx, MySQL, entre otros, así como diferentes tipos de tecnologías como Docker, plesk entre otras.</p>'
+    },
+    {
+        company: 'MicroDigit',
+        betweenDates: '2018 - 2022',
+        excerpt: 'Comencé encargandome de mantener webs CMS (wordress, prestashop), posteriormente me encargue en desarrollar plugin para los mismos y en la última etapa diseñe, organice y desarrollé un par de aplicaciones webs internas.',
+        showMore: 'Ver más',
+        descriptionHTML: '<p>Al salir del grado superior, posterior a las practicas me ofrecieron un puesto de trabajo a tiempo completo y desde entonces no pare en mejorar mis habilidades en el ámbito profesional y personal.</p><p>Valoraba y aconsejaba sobre que tecnologías deberían utilizarse en función de sus requerimientos.</p><p>En mi tiempo dentro de la empresa mi labor era mantener diferentes aplicaciones basadas en diferentes frameworks (Angular, Vue.js, Laravel).</p>'
+    },
+    {
+        company: 'MicroDigit',
+        betweenDates: '2015 - 2018',
+        excerpt: 'Me encargue en el cableado, configuración y documentación de las diferentes instalaciones realizadas en la empresa',
+        showMore: 'Ver más',
+        descriptionHTML: '<p>En esta sección pude aprender a montar, desmontar y reparar ordenadores, así como a configurar redes informáticas de todo tipo desde servidores hasta equipos de trabajo.</p>'
+    }
+]
+---
+
+<article class="section-experience">
+    
+    <h2 class="text-2xl font-semibold mb-4">Experiencia</h2>
+
+    {
+        experiences.map(experience => (
+            <ExperienceSectionItem {...experience} />
+        ))
+    }
+
+</article>

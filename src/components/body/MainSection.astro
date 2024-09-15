@@ -1,6 +1,7 @@
 ---
 import "devicon";
 import SkillGrid from "@/components/body/SkillGrid.astro";
+import ProfileIcon from "@/components/body/ProfileIcon.astro";
 ---
 
 <main class="container mx-auto">
@@ -19,10 +20,8 @@ import SkillGrid from "@/components/body/SkillGrid.astro";
         </div>
         
         <!-- Foto -->
-        <div class="bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg rounded-xl p-6 shadow-lg flex items-center justify-center">
-            <img src="/img/mainimage@2x.png" alt="Tu foto" class="rounded-full size-80 object-cover"/>
-        </div>
-        
+        <ProfileIcon />
+
         <!-- Habilidades -->
         <SkillGrid />
         
@@ -36,7 +35,7 @@ import SkillGrid from "@/components/body/SkillGrid.astro";
                 <div class="bg-white bg-opacity-20 p-4 rounded-lg">Proyecto 4</div>
             </div>
         </div>
-        
+
         <!-- Contacto -->
         <div class="col-span-3 bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg rounded-xl p-6 shadow-lg">
             <h2 class="text-2xl font-semibold mb-4">Contacto</h2>

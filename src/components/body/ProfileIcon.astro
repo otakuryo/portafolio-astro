@@ -1,0 +1,25 @@
+---
+import ImageWithIcons from "@/components/partials/ImageWithIcons.astro";
+
+
+const profileIcons: IconBasic[] = [
+    {
+        name: "LinkedIn",
+        icon: "linkedin",
+        link: "https://www.linkedin.com/in/agustin-mita/"
+    },
+    {
+        name: "GitHub",
+        icon: "github",
+        link: "https://github.com/otakuryo"
+    },
+    {
+        name: "Email",
+        icon: "google",
+        link: "mailto:gavota.oyente-0h@icloud.com"
+    }
+]
+
+---
+
+<ImageWithIcons image="/img/mainimage@2x.png" icons={profileIcons} />

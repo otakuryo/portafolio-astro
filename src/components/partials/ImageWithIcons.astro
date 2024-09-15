@@ -11,7 +11,7 @@ const { image, icons, alt } = Astro.props;
 ---
 
 <div class="bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg rounded-xl p-6 shadow-lg flex items-center justify-center relative">
-    <img src={image} alt={alt} class="rounded-full size-80 object-cover"/>
+    <img src={image} alt={alt} class="rounded-full size-80 object-cover" loading="lazy"/>
     <div class="grid-skills">
         <div class="grid-icons grid grid-cols-3 gap-4 absolute bottom-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
             {icons.map((icon) => (

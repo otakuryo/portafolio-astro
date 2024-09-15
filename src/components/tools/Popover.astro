@@ -1,6 +1,6 @@
 ---
     const { name, icon, link, customIcon, customLink } = Astro.props;
-    const iconClass = `devicon-${icon}-plain colored text-4xl`;  
+    const iconClass = `devicon-${icon}-plain colored text-4xl`;
 ---
 <style>
     .icon-container .show-tooltip {
@@ -26,11 +26,11 @@
 
 <div class="icon-container flex items-center justify-center relative">
     
-    <a href={link} target="_blank">
+    <a href={link} target="_blank" aria-label={name}>
         {customIcon ? (
-            <img src={customLink} alt={name} class="w-10 h-10" />
+            <img src={customLink} alt={name} class="w-10 h-10" aria-label={name} loading="eager" />
         ) : (
-            <i class={iconClass}></i>
+            <i class={iconClass} aria-label={name}></i>
         )}
     </a>
 

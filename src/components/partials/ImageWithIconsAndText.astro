@@ -1,0 +1,49 @@
+---
+import Popover from "@/components/tools/Popover.astro";
+
+interface Props {
+  image: string;
+  icons: IconBasic[];
+  alt: string;
+  title: string;
+  description: string;
+}
+
+const { image, icons, alt, title, description } = Astro.props;
+const countItems = icons.length;
+const classGrid = `grid-icons grid grid-cols-${countItems} gap-4`;
+---
+
+<style>
+    .section-image-with-icons-and-text,
+    .section-description,
+    .section-image {
+        transition: opacity 0.5s ease-in-out;
+    }
+    .section-image-with-icons-and-text .section-description {
+        opacity: 0;
+    }
+    .section-image-with-icons-and-text:hover .section-description {
+        opacity: 1;
+    }
+    .section-image-with-icons-and-text:hover .section-image {
+        opacity: 0.15;
+    }
+</style>
+
+<section class="section-image-with-icons-and-text backdrop-filter backdrop-blur-lg rounded-xl shadow-lg flex items-center justify-center relative flex-col gap-3 py-3">
+    <h3>
+        {title}
+    </h3>
+    <img src={image} alt={alt} class="section-image h-60 w-full object-contain"/>
+    <div class="section-description absolute top-0 left-0 w-full h-full flex items-center justify-center px-3 text-center cursor-help">
+        {description}
+    </div>
+    <div class="section-skills grid-skills mx-2">
+        <div class={classGrid}>
+            {icons.map((icon) => (
+                <Popover {...icon} />
+            ))}
+        </div>
+    </div>
+</section>

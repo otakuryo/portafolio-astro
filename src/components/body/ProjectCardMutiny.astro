@@ -1,0 +1,34 @@
+---
+import ImageWithIconsAndText from "@/components/partials/ImageWithIconsAndText.astro";
+
+const profileIcons: IconBasic[] = [
+    {
+        name: "Svelte",
+        icon: "svelte",
+        link: "https://svelte.dev/"
+    },
+    {
+        name: "Vite",
+        icon: "vitejs",
+        link: "https://vitejs.dev/"
+    },
+    {
+        name: "howlerjs",
+        icon: "howlerjs",
+        link: "https://howlerjs.com/",
+        customIcon: true,
+        customLink: "/icons/howlerjs-svg-icon.svg"
+    },
+    {
+        name: "GitHub",
+        icon: "github",
+        link: "https://github.com/otakuryo/mutiny-music-svelte"
+    }
+]
+---
+
+<ImageWithIconsAndText  image="/img/mutiny-music-svelte.png" 
+                        icons={profileIcons} 
+                        alt="Imagen con iconos - Agustin Mita" 
+                        title="Cliente Web de subsonic" 
+                        description="Cliente Web de subsonic usando el framework Svelte y la libreria de audio HowlerJS" />

@@ -2,6 +2,8 @@
 import "devicon";
 import SkillGrid from "@/components/body/SkillGrid.astro";
 import ProfileIcon from "@/components/body/ProfileIcon.astro";
+import ProjectCardMutiny from "@/components/body/ProjectCardMutiny.astro";
+
 ---
 
 <main class="container mx-auto">
@@ -29,16 +31,13 @@ import ProfileIcon from "@/components/body/ProfileIcon.astro";
         <div class="col-span-2 bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg rounded-xl p-6 shadow-lg">
             <h2 class="text-2xl font-semibold mb-4">Proyectos Destacados</h2>
             <div class="grid grid-cols-2 gap-4">
-                <div class="bg-white bg-opacity-20 p-4 rounded-lg">Proyecto 1</div>
-                <div class="bg-white bg-opacity-20 p-4 rounded-lg">Proyecto 2</div>
-                <div class="bg-white bg-opacity-20 p-4 rounded-lg">Proyecto 3</div>
-                <div class="bg-white bg-opacity-20 p-4 rounded-lg">Proyecto 4</div>
+                <ProjectCardMutiny />
             </div>
         </div>
 
         <!-- Contacto -->
         <div class="col-span-3 bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg rounded-xl p-6 shadow-lg">
-            <h2 class="text-2xl font-semibold mb-4">Contacto</h2>
+            <h2 class="text-2xl font-semibold mb-4">Experiencia</h2>
             <p>Email: tu@email.com</p>
             <p>LinkedIn: /in/tu-perfil</p>
             <p>GitHub: /tu-usuario</p>

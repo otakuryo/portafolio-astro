@@ -4,4 +4,6 @@ interface IconBasic {
     name: string;
     icon: string;
     link: string;
+    customIcon?: boolean;
+    customLink?: string;
 }

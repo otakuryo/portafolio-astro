@@ -1,0 +1,75 @@
+---
+import ImageWithIconsAndText from "@/components/partials/ImageWithIconsAndText.astro";
+
+const proyects = [
+    {
+        image: "/img/mdtareas@2x.png",
+        title: "WebApp de Tareas",
+        description: "Aplicación de informes a medida, con un listado con múltiples filtros, aplicando el método de desarrollo ágil.",
+        alt: "Stack tecnológico de la WebApp de Tareas",
+        icons: [
+            {
+                name: "Angular",
+                icon: "angular",
+                link: "https://angular.io/"
+            },
+            {
+                name: "nodejs",
+                icon: "nodejs",
+                link: "https://nodejs.org/en"
+            },
+            {
+                name: "Parse server",
+                icon: "Parse server",
+                link: "https://parseplatform.org/",
+                customIcon: true,
+                customLink: "/icons/parse-server.png"
+            },
+            {
+                name: "Gitlab",
+                icon: "gitlab",
+                link: "https://gitlab.com/otakuryo/"
+            }
+        ]
+    },
+    {
+        image: "/img/mdconcile@2x.png",
+        title: "Plugin para Wordpress",
+        description: "Módulo de busqueda de ficheros",
+        alt: "Stack tecnológico del Plugin para Wordpress",
+        icons: [
+            {
+                name: "Wordpress",
+                icon: "wordpress",
+                link: "https://wordpress.org/"
+            },
+            {
+                name: "PHP",
+                icon: "php",
+                link: "https://www.php.net/"
+            },
+            {
+                name: "Mysql",
+                icon: "mysql",
+                link: "https://www.mysql.com/"
+            },
+            {
+                name: "Gitlab",
+                icon: "gitlab",
+                link: "https://gitlab.com/otakuryo/"
+            }
+        ]
+    }
+]
+---
+
+<div class="col-span-3 bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg rounded-xl p-6 shadow-lg">
+    <h2 class="text-2xl font-semibold mb-4">Proyectos Destacados</h2>
+    <div class="flex flex-col md:grid grid-cols-2 gap-4">
+        {
+            proyects.map(proyect => (
+                <ImageWithIconsAndText {...proyect} />
+            ))
+        }
+    </div>
+</div>

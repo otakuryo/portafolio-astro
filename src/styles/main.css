@@ -43,6 +43,9 @@ h1 {
   section {
     @apply bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg rounded-xl p-3 mb-3 shadow-lg;
   }
+  section:nth-last-child(1) {
+    @apply mb-0;
+  }
   section h3 {
     @apply text-xl font-semibold mb-4;
   }

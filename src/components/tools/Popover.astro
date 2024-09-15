@@ -1,6 +1,6 @@
 ---
     const { name, icon, link } = Astro.props;
-    const iconClass = `pe-2 devicon-${icon}-plain colored text-4xl`;  
+    const iconClass = `devicon-${icon}-plain colored text-4xl`;  
 ---
 <style>
     .icon-container .show-tooltip {
@@ -24,7 +24,7 @@
     }
 </style>
 
-<div class="icon-container flex items-center justify-center relative" title={name}>
+<div class="icon-container flex items-center justify-center relative">
     <a href={link} target="_blank"><i class={iconClass}></i></a>
     <span class="show-tooltip absolute min-w-16 top-3/4 left-2/4 -translate-x-2/4 bg-black/50 text-white text-center rounded-md px-2 py-1">
         {name}

@@ -1,0 +1,25 @@
+@import "./botstrap-layout.css";
+
+/* Base de tailwinds */
+@tailwind base;
+
+/* Components de tailwinds */
+@tailwind components;
+
+/* Utilities de tailwinds */
+@tailwind utilities;
+
+
+/* Dark mode */
+html.dark {
+  background-color: #24262b;
+  color: #fff;
+}
+
+.dark .nav-links a {
+  color: #fff;
+}
+
+h1 {
+    @apply text-2xl font-bold;
+}

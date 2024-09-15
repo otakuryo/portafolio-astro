@@ -1,0 +1,81 @@
+:root {
+  --container-padding: 15px;
+  --row-margin: 15px;
+  --column-padding: 15px;
+}
+
+.container,
+.container-fluid {
+  width: 100%;
+  padding-right: var(--container-padding);
+  padding-left: var(--container-padding);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.container {
+  @media (min-width: 576px) {
+    max-width: 540px;
+  }
+
+  @media (min-width: 768px) {
+    max-width: 720px;
+  }
+
+  @media (min-width: 992px) {
+    max-width: 960px;
+  }
+
+  @media (min-width: 1200px) {
+    max-width: 1140px;
+  }
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: calc(var(--row-margin) * -1);
+  margin-left: calc(var(--row-margin) * -1);
+}
+
+[class^="col-"] {
+  position: relative;
+  width: 100%;
+  padding-right: var(--column-padding);
+  padding-left: var(--column-padding);
+}
+
+@custom-media --sm-viewport (min-width: 576px);
+@custom-media --md-viewport (min-width: 768px);
+@custom-media --lg-viewport (min-width: 992px);
+@custom-media --xl-viewport (min-width: 1200px);
+
+@for $i from 1 to 12 {
+  @media (--sm-viewport) {
+    .col-sm-$(i) {
+      flex: 0 0 calc(100% * $(i) / 12);
+      max-width: calc(100% * $(i) / 12);
+    }
+  }
+
+  @media (--md-viewport) {
+    .col-md-$(i) {
+      flex: 0 0 calc(100% * $(i) / 12);
+      max-width: calc(100% * $(i) / 12);
+    }
+  }
+
+  @media (--lg-viewport) {
+    .col-lg-$(i) {
+      flex: 0 0 calc(100% * $(i) / 12);
+      max-width: calc(100% * $(i) / 12);
+    }
+  }
+
+  @media (--xl-viewport) {
+    .col-xl-$(i) {
+      flex: 0 0 calc(100% * $(i) / 12);
+      max-width: calc(100% * $(i) / 12);
+    }
+  }
+}

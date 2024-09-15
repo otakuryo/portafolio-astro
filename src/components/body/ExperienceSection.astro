@@ -3,11 +3,11 @@ import ExperienceSectionItem from '@/components/partials/ExperienceSectionItem.a
 
 const experiences = [
     {
-        company: 'ADN Comunicacion',
+        company: 'ADN Comunicación',
         betweenDates: '2022 - actualidad',
-        excerpt: 'En está empresa me desempeño como desarrollador fullstack, trabajando principalmente con Laravel en la parte de back-end y bootstrap y react en la parte de front-end.',
+        excerpt: 'En esta empresa soy un desarrollador fullstack, trabajando principalmente con Laravel en la parte de back-end y bootstrap y react en la parte de front-end.',
         showMore: 'Ver más',
-        descriptionHTML: '<p>En determinados dias doy soporte tecnico informatico a los empleados de la empresa, así como soluciones puntuales de problemas informaticos y dudas sobre como usar ciertas aplicaciones.</p><p>Por otro lado, soy el encargado de la infraestructura de la empresa, lo que incluye la configuración y mantenimiento de las diferentes servidores y aplicaciones que la empresa usa con lo de servidores web, bases de datos y aplicaciones internas se refiere, gracias a esto he aprendido a usar diferentes sistemas operativos como linux y diferentes tipos de servidores como Apache, Nginx, MySQL, entre otros, así como diferentes tipos de tecnologías como Docker, plesk entre otras.</p>'
+        descriptionHTML: '<p>En determinados dias doy soporte tecnico informatico a los empleados de la empresa, así como soluciones puntuales de problemas informáticos y dudas sobre como usar ciertas aplicaciones.</p><p>Por otro lado, soy el encargado de la infraestructura de la empresa, lo que incluye la configuración y mantenimiento de las diferentes servidores y aplicaciones que la empresa usa con lo de servidores web, bases de datos y aplicaciones internas se refiere, gracias a esto he aprendido a usar diferentes sistemas operativos como linux y diferentes tipos de servidores como Apache, Nginx, MySQL, entre otros, así como diferentes tipos de tecnologías como Docker, plesk entre otras.</p>'
     },
     {
         company: 'MicroDigit',
@@ -26,14 +26,16 @@ const experiences = [
 ]
 ---
 
-<article class="section-experience">
-    
-    <h2 class="text-2xl font-semibold mb-4">Experiencia</h2>
+<div class="col-span-3 bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg rounded-xl p-6 shadow-lg">
+    <article class="section-experience">
+        
+        <h2 class="text-2xl font-semibold mb-4">Experiencia</h2>
 
-    {
-        experiences.map(experience => (
-            <ExperienceSectionItem {...experience} />
-        ))
-    }
+        {
+            experiences.map(experience => (
+                <ExperienceSectionItem {...experience} />
+            ))
+        }
 
-</article>
+    </article>
+</div>

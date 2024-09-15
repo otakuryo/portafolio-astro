@@ -12,7 +12,7 @@
 
 /* Dark mode */
 html.dark {
-  background-color: #24262b;
+  background-color: #09090c;
   color: #fff;
 }
 
@@ -50,10 +50,10 @@ h1 {
     @apply text-xl font-semibold mb-4;
   }
   section h3 span {
-    @apply text-sm text-gray-800;
+    @apply text-sm text-slate-300;
   }
   summary {
-    @apply text-sm text-gray-800 cursor-pointer;
+    @apply text-sm text-gray-300 cursor-pointer;
   }
   details {
     @apply select-none ps-3;

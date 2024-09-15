@@ -4,6 +4,10 @@ import SkillGrid from "@/components/body/SkillGrid.astro";
 import ProfileIcon from "@/components/body/ProfileIcon.astro";
 import ProjectCardMutiny from "@/components/body/ProjectCardMutiny.astro";
 import ExperienceSection from "@/components/body/ExperienceSection.astro";
+import FooterSpace from "@/components/partials/FooterSpace.astro";
+import KnowledgeSectionOfficial from "@/components/body/KnowledgeSectionOfficial.astro";
+import KnowledgeSectionNotOfficial from "@/components/body/KnowledgeSectionNotOfficial.astro"; 
+import SideProjectCardMutiny from "@/components/body/SideProjectCardMutiny.astro";
 
 ---
 
@@ -29,19 +33,21 @@ import ExperienceSection from "@/components/body/ExperienceSection.astro";
         <SkillGrid />
         
         <!-- Proyectos -->
-        <div class="col-span-2 bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg rounded-xl p-6 shadow-lg">
-            <h2 class="text-2xl font-semibold mb-4">Proyectos Destacados</h2>
-            <div class="flex flex-col md:grid grid-cols-2 gap-4">
-                <ProjectCardMutiny />
-            </div>
-        </div>
+        <ProjectCardMutiny />
 
         <!-- Experiencia -->
-        <div class="col-span-3 bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg rounded-xl p-6 shadow-lg">
-            <ExperienceSection />
-        </div>
+        <ExperienceSection />
+
+        <!-- Conimientos reglados -->
+        <KnowledgeSectionOfficial />
+
+        <!-- Conimientos no reglados -->
+        <KnowledgeSectionNotOfficial />
+
+        <!-- Proyectos Varios-->
+        <SideProjectCardMutiny />
 
         <!-- Espacio -->
-        <div class="col-span-3 h-10"></div>
+        <FooterSpace />
     </div>
 </main>

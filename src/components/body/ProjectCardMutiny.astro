@@ -1,39 +1,102 @@
 ---
 import ImageWithIconsAndText from "@/components/partials/ImageWithIconsAndText.astro";
 
-const profileIcons: IconBasic[] = [
+const proyects = [
     {
-        name: "Svelte",
-        icon: "svelte",
-        link: "https://svelte.dev/"
+        image: "/img/mutiny-music-svelte.png",
+        title: "Cliente Web de subsonic",
+        description: "Cliente Web de subsonic usando el framework Svelte y la libreria de audio HowlerJS",
+        alt: "Stack tecnológico del proyecto Mutiny Music",
+        icons: [
+            {
+                name: "Svelte",
+                icon: "svelte",
+                link: "https://svelte.dev/"
+            },
+            {
+                name: "Vite",
+                icon: "vitejs",
+                link: "https://vitejs.dev/"
+            },
+            {
+                name: "howlerjs",
+                icon: "howlerjs",
+                link: "https://howlerjs.com/",
+                customIcon: true,
+                customLink: "/icons/howlerjs-svg-icon.svg"
+            },
+            {
+                name: "GitHub",
+                icon: "github",
+                link: "https://github.com/otakuryo/mutiny-music-svelte"
+            },
+            {
+                name: "Demo",
+                icon: "Demo",
+                link: "https://mutynic.netlify.app/settings",
+                customIcon: true,
+                customLink: "/icons/external-link.svg"
+            }
+        ]
     },
     {
-        name: "Vite",
-        icon: "vitejs",
-        link: "https://vitejs.dev/"
-    },
-    {
-        name: "howlerjs",
-        icon: "howlerjs",
-        link: "https://howlerjs.com/",
-        customIcon: true,
-        customLink: "/icons/howlerjs-svg-icon.svg"
-    },
-    {
-        name: "GitHub",
-        icon: "github",
-        link: "https://github.com/otakuryo/mutiny-music-svelte"
+        image: "/img/poopcountwa@2x.png",
+        title: "Poopcount (en desarrollo)",
+        description: "Esta aplicación web permite a los usuarios contar la cantidad de '💩' \
+        y ver las estadísticas del grupo de usuarios, a partir de una exportación de conversación \
+        de whatsapp, todo esto se el calculo y la estadística se hace en el dispositivo del usuario, \
+        por lo cual no se almacena ningún dato en la nube. Ahora mismo estoy en el proceso de \
+        aprender AWS para compartir las estadisticas con otros usuarios.",
+        alt: "Stack tecnológico del proyecto Poopcount - Agustin Mita",
+        icons: [
+            {
+                name: "Svelte",
+                icon: "svelte",
+                link: "https://svelte.dev/"
+            },
+            {
+                name: "Vite",
+                icon: "vitejs",
+                link: "https://vitejs.dev/"
+            },
+            {
+                name: "ChartJS",
+                icon: "chartjs",
+                link: "https://chartjs.org/",
+                customIcon: true,
+                customLink: "/img/chartjs-logo.svg"
+            },
+            {
+                name: "AWS",
+                icon: "amazonwebservices",
+                link: "https://aws.amazon.com/es/"
+            },
+            {
+                name: "GitHub",
+                icon: "github",
+                link: "https://github.com/otakuryo/poopcount"
+            },
+            {
+                name: "Demo",
+                icon: "Demo",
+                link: "https://poopcountwa.netlify.app/",
+                customIcon: true,
+                customLink: "/icons/external-link.svg"
+            }
+            
+        ]
     }
 ]
+
 ---
 
 <div class="col-span-2 bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg rounded-xl p-6 shadow-lg">
     <h2 class="text-2xl font-semibold mb-4">Proyectos Destacados</h2>
     <div class="flex flex-col md:grid grid-cols-2 gap-4">
-        <ImageWithIconsAndText  image="/img/mutiny-music-svelte.png" 
-                                icons={profileIcons} 
-                                alt="Imagen con iconos - Agustin Mita" 
-                                title="Cliente Web de subsonic" 
-                                description="Cliente Web de subsonic usando el framework Svelte y la libreria de audio HowlerJS" />
+        {
+            proyects.map(proyect => (
+                <ImageWithIconsAndText {...proyect} />
+            ))
+        }
     </div>
 </div>

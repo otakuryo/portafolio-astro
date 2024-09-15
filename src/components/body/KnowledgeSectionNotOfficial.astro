@@ -1,0 +1,73 @@
+---
+const items = [
+    {
+        date: '2022',
+        title: 'Curso de NodeJs (udemy)',
+    },
+    {
+        date: '2022',
+        title: 'Curso de Angular (udemy)',
+    },
+    {
+        date: '2022',
+        title: 'Curso de Javascript (udemy)',
+    },
+    {
+        date: '2022',
+        title: 'Curso de Swift (Tutoriales de apple)',
+    },
+    {
+        date: '2022',
+        title: 'Curso de wordpress (Youtube)',
+    },
+    {
+        date: '2022',
+        title: 'Curso de prestashop (Youtube)',
+    },
+    {
+        date: '2022',
+        title: 'Diseño y desarrollo (Youtube)',
+    },
+    {
+        date: '2023',
+        title: 'Laravel desde cero (youtube)',
+    },
+    {
+        date: '2023',
+        title: 'Curso astro (youtube)',
+    },
+    {
+        date: '2023',
+        title: 'Curso de svelte (youtube)',
+    },
+    {
+        date: '2023',
+        title: 'Webhoks con express (youtube)',
+    },
+    {
+        date: '2023',
+        title: 'Curso de react (youtube)',
+    },
+    {
+        date: '2024',
+        title: 'Construye tu blog con astro (Tutoriales de astro)',
+    }
+
+]
+---
+
+<div class="col-span-3 bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg rounded-xl p-6 shadow-lg">
+    <article class="section-experience">
+        
+        <h2 class="text-2xl font-semibold mb-4">Educación no reglada</h2>
+
+        <ul class="xl:columns-3">
+            {
+                items.map(item => (
+                    <li><span class="font-mono pe-3">{item.date}</span> {item.title}</li>
+                ))
+            }
+        </ul>
+
+    </article>
+</div>

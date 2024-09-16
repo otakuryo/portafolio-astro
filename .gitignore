@@ -25,3 +25,6 @@ pnpm-debug.log*
 
 # Ignoramos el directorio de old-portafolio
 old-portafolio
+
+# .netlify
+.netlify

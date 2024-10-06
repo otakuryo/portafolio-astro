@@ -23,6 +23,8 @@ const classGrid = `grid-icons grid grid-cols-${countItems} gap-4`;
     .section-image-with-icons-and-text .section-description {
         opacity: 0;
     }
+
+    .section-image-with-icons-and-text:focus .section-description,
     .section-image-with-icons-and-text:hover .section-description {
         opacity: 1;
     }
@@ -46,4 +48,9 @@ const classGrid = `grid-icons grid grid-cols-${countItems} gap-4`;
             ))}
         </div>
     </div>
+    
+    <div class="absolute top-0 end-0">
+        <img class="p-2 z-50 cursor-help" src="/icons/info.svg" alt="Mostrar información">
+    </div>
+
 </section>
